@@ -1,4 +1,6 @@
-venv/
+transcriptor-env/
+uploads/
+.env
 
 __pycache__/
 *.py[cod]

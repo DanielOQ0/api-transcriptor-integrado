@@ -1,18 +1,21 @@
 from flask import Flask
-
+import os
 # Routes
-from .routes import AuthRoutes, IndexRoutes, LanguageRoutes
+from .routes import TranscriptorRoutes
 
 app = Flask(__name__)
 
 
 def init_app(config):
-    # Configuration
+    # Configuración
     app.config.from_object(config)
 
-    # Blueprints
-    app.register_blueprint(IndexRoutes.main, url_prefix='/')
-    app.register_blueprint(AuthRoutes.main, url_prefix='/auth')
-    app.register_blueprint(LanguageRoutes.main, url_prefix='/languages')
+    #Configuración sistema de archivos
+    app.config['UPLOAD_FOLDER'] = 'src/uploads'
+    if not os.path.exists(app.config['UPLOAD_FOLDER']):
+        os.makedirs(app.config['UPLOAD_FOLDER'])
+
+    # plantillas
+    app.register_blueprint(TranscriptorRoutes.main, url_prefix='/')
 
     return app
