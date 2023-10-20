@@ -506,3 +506,241 @@ UnboundLocalError: cannot access local variable 'json_data' where it is not asso
     raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
 TypeError: Object of type Response is not JSON serializable
 
+2023-10-19 18:25:48 | INFO | POST /transcribir/whisper
+2023-10-19 18:28:31 | INFO | POST /transcribir/whisper
+2023-10-19 18:29:50 | INFO | POST /transcribir/whisper
+2023-10-19 18:36:21 | INFO | POST /transcribir/whisper
+2023-10-19 18:37:42 | INFO | POST /transcribir/whisper
+2023-10-19 18:39:32 | INFO | POST /transcribir/whisper
+2023-10-19 18:40:40 | INFO | POST /transcribir/whisper
+2023-10-19 18:40:40 | ERROR | [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-40-40).wav'
+2023-10-19 18:40:40 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 27, in transcribir
+    nomArchivo = guardarAudio(request.remote_addr, archivo)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\Archivos.py", line 10, in guardarAudio
+    archivo.save(os.path.join("src/uploads",nomArchivo))
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-40-40).wav'
+
+2023-10-19 18:41:11 | INFO | POST /transcribir/whisper
+2023-10-19 18:41:11 | ERROR | [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-41-11).wav'
+2023-10-19 18:41:11 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 27, in transcribir
+    nomArchivo = guardarAudio(request.remote_addr, archivo)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\Archivos.py", line 10, in guardarAudio
+    archivo.save(os.path.join("src/uploads",nomArchivo))
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-41-11).wav'
+
+2023-10-19 18:42:45 | INFO | POST /transcribir/whisper
+2023-10-19 18:42:45 | ERROR | [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-42-45).wav'
+2023-10-19 18:42:45 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 27, in transcribir
+    nomArchivo = guardarAudio(request.remote_addr, archivo)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\Archivos.py", line 10, in guardarAudio
+    archivo.save(os.path.join("src/uploads",nomArchivo))
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-42-45).wav'
+
+2023-10-19 18:44:54 | INFO | POST /transcribir/whisper
+2023-10-19 18:44:54 | ERROR | cannot access local variable 'transcripcion' where it is not associated with a value
+2023-10-19 18:44:54 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 41, in transcribir
+    print(transcripcion)
+          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'transcripcion' where it is not associated with a value
+
+2023-10-19 18:45:31 | INFO | POST /transcribir/whisper
+2023-10-19 18:46:02 | INFO | POST /transcribir/whisper
+2023-10-19 18:54:41 | INFO | POST /transcribir/whisper
+2023-10-19 18:58:12 | INFO | POST /transcribir/whisper
+2023-10-19 18:58:40 | INFO | POST /transcribir/whisper
+2023-10-19 18:58:54 | INFO | POST /transcribir/whisper
+2023-10-19 18:59:16 | INFO | POST /transcribir/whisper
+2023-10-19 18:59:16 | ERROR | [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-59-16).wav'
+2023-10-19 18:59:16 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 27, in transcribir
+    nomArchivo = guardarAudio(request.remote_addr, archivo)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\Archivos.py", line 10, in guardarAudio
+    archivo.save(os.path.join("src/uploads",nomArchivo))
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/uploads\\127.0.0.1(2023-10-19_18-59-16).wav'
+
+2023-10-19 18:59:36 | INFO | POST /transcribir/whisper
+2023-10-19 19:00:08 | INFO | POST /transcribir/whisper
+2023-10-19 19:00:26 | INFO | POST /transcribir/whisper
+2023-10-19 19:00:56 | INFO | POST /transcribir/whisper
+2023-10-19 19:01:12 | INFO | POST /transcribir/whisper
+2023-10-19 19:01:30 | INFO | POST /transcribir/whisper
+2023-10-19 19:01:46 | INFO | POST /transcribir/whisper
+2023-10-19 19:07:45 | INFO | POST /transcribir/whisper
+2023-10-19 19:52:17 | INFO | POST /transcribir/whisper
+2023-10-19 19:53:43 | INFO | POST /transcribir/sphinx
+2023-10-19 19:53:43 | ERROR | [Errno 2] No such file or directory: 'C:\\Users\\Usuario\\OneDrive\\Escritorio\\FCV Desarrollo\\Trasncriptor\\api-transcriptor-integrado\\src\\services\\src/uploads/127.0.0.1(2023-10-19_19-53-43).wav'
+2023-10-19 19:53:43 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 47, in transcribir
+    transcripcion = transcribirSphinx(nomArchivo)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\ModelosTranscriptor.py", line 47, in transcribirSphinx
+    with speRec.AudioFile(rutaAudio) as source:
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\speech_recognition\__init__.py", line 241, in __enter__
+    self.audio_reader = wave.open(self.filename_or_fileobject, "rb")
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\wave.py", line 630, in open
+    return Wave_read(f)
+           ^^^^^^^^^^^^
+  File "C:\Python311\Lib\wave.py", line 280, in __init__
+    f = builtins.open(f, 'rb')
+        ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Usuario\\OneDrive\\Escritorio\\FCV Desarrollo\\Trasncriptor\\api-transcriptor-integrado\\src\\services\\src/uploads/127.0.0.1(2023-10-19_19-53-43).wav'
+
+2023-10-19 19:57:42 | INFO | POST /transcribir/sphinx
+2023-10-19 19:57:42 | ERROR | [Errno 2] No such file or directory: 'C:\\Users\\Usuario\\OneDrive\\Escritorio\\FCV Desarrollo\\Trasncriptor\\api-transcriptor-integrado\\src\\services\\src/uploads/127.0.0.1(2023-10-19_19-57-42).wav'
+2023-10-19 19:57:42 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 47, in transcribir
+    transcripcion = transcribirSphinx(nomArchivo)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\ModelosTranscriptor.py", line 47, in transcribirSphinx
+    with speRec.AudioFile(rutaAudio) as source:
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\speech_recognition\__init__.py", line 241, in __enter__
+    self.audio_reader = wave.open(self.filename_or_fileobject, "rb")
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\wave.py", line 630, in open
+    return Wave_read(f)
+           ^^^^^^^^^^^^
+  File "C:\Python311\Lib\wave.py", line 280, in __init__
+    f = builtins.open(f, 'rb')
+        ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Usuario\\OneDrive\\Escritorio\\FCV Desarrollo\\Trasncriptor\\api-transcriptor-integrado\\src\\services\\src/uploads/127.0.0.1(2023-10-19_19-57-42).wav'
+
+2023-10-19 20:01:38 | INFO | POST /transcribir/sphinx
+2023-10-19 20:01:38 | ERROR | name 'escucharAudio' is not defined
+2023-10-19 20:01:38 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 47, in transcribir
+    transcripcion = transcribirSphinx(nomArchivo)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\ModelosTranscriptor.py", line 46, in transcribirSphinx
+    audio = escucharAudio.record(source)
+            ^^^^^^^^^^^^^
+NameError: name 'escucharAudio' is not defined
+
+2023-10-19 20:01:44 | INFO | POST /transcribir/sphinx
+2023-10-19 20:01:44 | ERROR | name 'escucharAudio' is not defined
+2023-10-19 20:01:44 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 47, in transcribir
+    transcripcion = transcribirSphinx(nomArchivo)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\ModelosTranscriptor.py", line 46, in transcribirSphinx
+    audio = escucharAudio.record(source)
+            ^^^^^^^^^^^^^
+NameError: name 'escucharAudio' is not defined
+
+2023-10-19 20:04:11 | INFO | POST /transcribir/sphinx
+2023-10-19 20:09:09 | INFO | POST /transcribir/sphinx
+2023-10-19 20:09:51 | INFO | POST /transcribir/sphinx
+2023-10-19 20:11:44 | INFO | POST /transcribir/sphinx
+2023-10-19 20:15:40 | INFO | POST /transcribir/whisper
+2023-10-19 20:16:12 | INFO | POST /transcribir/sphinx
+2023-10-19 20:19:46 | INFO | POST /transcribir/whisper
+2023-10-19 20:21:16 | INFO | POST /transcribir/whisper
+2023-10-19 20:22:10 | INFO | POST /transcribir/whisper
+2023-10-19 20:24:15 | INFO | POST /transcribir/whisper
+2023-10-19 20:25:07 | INFO | POST /transcribir/whisper
+2023-10-19 20:26:04 | INFO | POST /transcribir/whisper
+2023-10-19 20:29:18 | INFO | POST /transcribir/whisper
+2023-10-19 20:29:29 | ERROR | CUDA failed with error out of memory
+2023-10-19 20:29:29 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 38, in transcribir
+    transcripcion = transcribirWhisper(nomArchivo, config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\ModelosTranscriptor.py", line 13, in transcribirWhisper
+    result = model.transcribe(audio, batch_size=config.tamLote)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 305, in transcribe
+    for idx, out in enumerate(self.__call__(data(audio, vad_segments), batch_size=batch_size, num_workers=num_workers)):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\transformers\pipelines\pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\transformers\pipelines\pt_utils.py", line 125, in __next__
+    processed = self.infer(item, **self.params)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\transformers\pipelines\base.py", line 1046, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 239, in _forward
+    outputs = self.model.generate_segment_batched(model_inputs['inputs'], self.tokenizer, self.options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 139, in generate_segment_batched
+    encoder_output = self.encode(features)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 178, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA failed with error out of memory
+
+2023-10-19 20:30:07 | INFO | POST /transcribir/whisper
+2023-10-19 20:30:08 | ERROR | 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2023-10-19 20:30:08 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 32, in transcribir
+    dispositivo = request.form['dispositivo']
+                  ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\werkzeug\datastructures\structures.py", line 192, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+2023-10-19 20:30:43 | INFO | POST /transcribir/whisper
+2023-10-19 20:31:03 | ERROR | CUDA failed with error out of memory
+2023-10-19 20:31:03 | ERROR | Traceback (most recent call last):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\routes\TranscriptorRoutes.py", line 38, in transcribir
+    transcripcion = transcribirWhisper(nomArchivo, config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\src\services\ModelosTranscriptor.py", line 13, in transcribirWhisper
+    result = model.transcribe(audio, batch_size=config.tamLote)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 305, in transcribe
+    for idx, out in enumerate(self.__call__(data(audio, vad_segments), batch_size=batch_size, num_workers=num_workers)):
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\transformers\pipelines\pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\transformers\pipelines\pt_utils.py", line 125, in __next__
+    processed = self.infer(item, **self.params)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\transformers\pipelines\base.py", line 1046, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 239, in _forward
+    outputs = self.model.generate_segment_batched(model_inputs['inputs'], self.tokenizer, self.options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 139, in generate_segment_batched
+    encoder_output = self.encode(features)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\OneDrive\Escritorio\FCV Desarrollo\Trasncriptor\api-transcriptor-integrado\transcriptor-env\Lib\site-packages\whisperx\asr.py", line 178, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA failed with error out of memory
+
+2023-10-19 20:32:26 | INFO | POST /transcribir/whisper
+2023-10-19 20:53:12 | INFO | POST /transcribir/whisper
+2023-10-19 20:53:43 | INFO | POST /transcribir/sphinx
+2023-10-19 21:01:27 | INFO | POST /transcribir/whisper
+2023-10-19 21:05:26 | INFO | POST /transcribir/sphinx
+2023-10-19 21:06:28 | INFO | POST /transcribir/whisper
+2023-10-19 21:08:23 | INFO | POST /transcribir/whisper
+2023-10-19 21:12:21 | INFO | POST /transcribir/whisper
+2023-10-19 21:12:45 | INFO | POST /transcribir/whisper
+2023-10-19 21:16:49 | INFO | POST /transcribir/whisper
+2023-10-19 21:21:29 | INFO | POST /transcribir/sphinx
+2023-10-19 21:23:28 | INFO | POST /transcribir/whisper
+2023-10-19 21:24:21 | INFO | POST /transcribir/whisper
