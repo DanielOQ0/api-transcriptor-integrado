@@ -1,0 +1,32 @@
+h1.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+div.fila {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 25px 25px 25px 25px;
+}
+
+.botonGrabar {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botonDetener {
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea.areaTexto {
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    width: 900px;
+    height: 300px;
+}

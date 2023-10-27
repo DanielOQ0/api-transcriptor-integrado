@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranscriptorFCV</title>
+</head>
+<body>
+    <header>
+        <h1>Transcribir archivos</h1>
+    </header>
+    <main>
+        <form id="myForm">
+            <label for="audio">Archivo (WAV):</label>
+            <input type="file" id="audio" accept=".wav" name="audio"><br><br>
+    
+            <label for="modeloLen">Modelo:</label>
+            <select id="modeloLen" name="modeloLen">
+                <option value="whisper">Whisper</option>
+                <option value="sphinx">Sphinx</option>
+            </select><br><br>
+    
+            <label for="modelo">Modelo Whisper:</label>
+            <select id="modelo" name="modelo">
+                <option value="tiny">Tiny</option>
+                <option value="base">Base</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large-v2">Large v2</option>
+            </select><br><br>
+    
+            <label for="dispositivo">Dispositivo</label>
+            <select id="dispositivo" name="dispositivo">
+                <option value="cpu">CPU</option>
+                <option value="cuda">GPU</option>
+            </select><br><br>
+
+            <label for="tipoComputo">Tipo de Computo</label>
+            <select id="tipoComputo" name="tipoComputo">
+                <option value="int8">CPU</option>
+                <option value="float16">GPU</option>
+            </select><br><br>
+    
+            <label for="tamLote">Tamaño de Lote:</label>
+            <input type="number" id="tamLote" name="tamLote" min="1" max="16" value="16"><br><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <footer style="width: 100%;">
+        <h2>URL</h2>
+        <select id="url" name="url">
+            <option value="https://xq3d8bbg-5000.use2.devtunnels.ms">Personal</option>
+            <option value="http://172.16.66.207:5000">Corporativo</option>
+        </select><br><br>
+        <h2>Respuesta</h2>
+        <label><span>Tiempo: </span><input type="text" id="tiempo" style="border: none;" disabled="true"></label>
+        <textarea id="response" style="width: 100%; min-height: 200px;" ></textarea>
+    </footer>
+</body>
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var formData = new FormData(this);
+        var modelo = document.getElementById('modeloLen').value;
+        var url = document.getElementById('url').value;
+        // Aquí puedes enviar la solicitud HTTP usando 'fetch' o 'XMLHttpRequest'
+        // Ejemplo con 'fetch':
+        document.getElementById('response').value = JSON.stringify('Solicitud en curso, esperando respuesta');
+        fetch(`${url}/transcribir/${modelo}`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta del servidor:', data);
+            document.getElementById('response').value = JSON.stringify(data.texto?data.texto:data.message);
+            document.getElementById('tiempo').value = JSON.stringify(data.tiempo);
+            document.getElementById('response').style.height = "auto";
+            document.getElementById('response').style.height = (document.getElementById('response').scrollHeight) + "px";
+        })
+        .catch(error => console.error('Error:', error));
+    });
+    document.getElementById('modeloLen').addEventListener('change', function() {
+        var selectedModelo = this.value;
+        var selectWhisper = document.getElementById('modelo');
+        var selectDispositivo = document.getElementById('dispositivo');
+        var selectTipoComputo = document.getElementById('tipoComputo');
+        var tamLoteInput = document.getElementById('tamLote');
+
+        // Dependiendo del modelo seleccionado, habilitar o deshabilitar otros selects
+        if (selectedModelo === 'whisper') {
+            selectWhisper.removeAttribute('disabled');
+            selectDispositivo.removeAttribute('disabled');
+            selectTipoComputo.removeAttribute('disabled');
+            tamLoteInput.removeAttribute('disabled');
+        } else if (selectedModelo === 'sphinx') {
+            selectWhisper.setAttribute('disabled', 'disabled');
+            selectDispositivo.setAttribute('disabled', 'disabled');
+            selectTipoComputo.setAttribute('disabled', 'disabled');
+            tamLoteInput.setAttribute('disabled', 'disabled');
+        }
+    });
+</script>
+</html>

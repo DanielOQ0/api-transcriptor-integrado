@@ -1,7 +1,8 @@
-from flask import Flask
 import os
-# Routes
-from .routes import TranscriptorRoutes
+
+from flask import Flask
+from flask_cors import CORS
+
 
 app = Flask(__name__)
 
@@ -15,7 +16,8 @@ def init_app(config):
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
         os.makedirs(app.config['UPLOAD_FOLDER'])
 
-    # plantillas
-    app.register_blueprint(TranscriptorRoutes.main, url_prefix='/')
+    app.config['STATIC_URL_PATH'] = '/src/static'
+
+    CORS(app)
 
     return app
